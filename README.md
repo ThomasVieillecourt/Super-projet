@@ -1,3 +1,3 @@
 # Super-projet
 
-## A faire : ajouter un .gitignore
+## A faire : ajouter un `.gitignore`
