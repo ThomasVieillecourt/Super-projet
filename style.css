@@ -5,6 +5,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+    transition: 0.2s linear;
+}
+
 .btn {
     text-transform: uppercase;
     padding: 10px 24px;
@@ -12,6 +17,7 @@
     background-color: white;
     border: 1px solid rgb(180, 180, 180);
     font-size: 0.7rem;
+    cursor: pointer;
 }
 
 h2 {
@@ -51,6 +57,52 @@ p {
 .header__content p {
     padding: 5% 0;
 }
+
+.toggle {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+}
+
+.checkbox {
+    display: none;
+}
+
+.label {
+    height: 30px;
+    width: 60px;
+    background: rgb(204, 199, 190);
+    padding: 8px 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    box-shadow: 1px 1px 1px #333;
+}
+
+.label .ball {
+    background: #eee;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    transform: translateX(0px);
+    transition: transform 0.4s cubic-bezier();
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(26px);
+}
+
+.fa-moon {
+    color: #333;
+}
+
 
 .first__bloc {
     display: grid;
@@ -159,7 +211,7 @@ footer a {
 
     .img__header {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: contain;
 
     }
@@ -207,4 +259,50 @@ footer a {
         text-decoration: none;
     }
 
+}
+
+
+/* DARK-MODE */
+.dark {
+    background: #333;
+}
+
+.dark h1 {
+    color: rgb(240, 240, 240);
+}
+
+.dark h2 {
+    color: rgb(240, 240, 240);
+}
+
+.dark p {
+    color: rgb(240, 240, 240);
+}
+
+.dark form label {
+    color: rgb(240, 240, 240);
+}
+
+.dark footer i {
+    color: rgb(240, 240, 240);
+}
+
+.dark .label {
+    box-shadow: 1px 1px 1px rgb(240, 240, 240);
+}
+
+.dark .first__bloc {
+    border-top: 1px solid rgb(37, 37, 37);
+}
+
+.dark .second__bloc {
+    border-top: 1px solid rgb(37, 37, 37);
+}
+
+.dark .container__form {
+    border-top: 1px solid rgb(37, 37, 37);
+}
+
+.dark footer {
+    border-top: 1px solid rgb(37, 37, 37);
 }
